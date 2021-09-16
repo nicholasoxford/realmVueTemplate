@@ -12,7 +12,9 @@ const app = createApp({
   },
   render: () => h(App),
 })
-const id = "dataviz-bzphb";
+
+// TODO: replace with your realm id
+const id = "dataviz-REPLACEME";
 const config = {
   id,
 };
@@ -21,7 +23,7 @@ const appRealm = new Realm.App(config);// Gets a valid Realm user access token t
 // HTTP connection to the API
 const httpLink = createHttpLink({
   // You should use an absolute URL here
-  uri: 'https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/dataviz-bzphb/graphql',
+  uri: 'REPAlCE-THiS-WITH-YOUR-REALM-URL',
   fetch: async (uri, options) => {
     const accessToken = await getValidAccessToken();
     options.headers.Authorization = `Bearer ${accessToken}`;
